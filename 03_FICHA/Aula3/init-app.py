@@ -1,12 +1,9 @@
-#!/usr/bin/python
+#!/usr/bin/python2
 
-import sys, getopt
+import getopt
+import sys
+
 from eVotUM.Cripto import eccblind
-
-
-def get_p_r_dash_components():
-    init_components, pr_dash_components = eccblind.initSigner()
-    return init_components, pr_dash_components
 
 
 def main(argv):
@@ -24,15 +21,14 @@ def main(argv):
             elif opt == "--init":
                 out_file = arg
 
-                init_components, pr_dash_components = get_p_r_dash_components()
+                init_components, pr_dash_components = eccblind.initSigner()
                 with open(out_file, "w") as f:
                     f.write("initComponents: " + init_components + "\n")
                     f.write("pRDashComponents: " + pr_dash_components + "\n")
-                # print "File {} created".format(out_file)
 
     else:
-            init_components, pr_dash_components = get_p_r_dash_components()
-            print(pr_dash_components)
+            init_components, pr_dash_components = eccblind.initSigner()
+            print "pRDashComponents: {}".format(pr_dash_components)
 
 
 if __name__ == "__main__":

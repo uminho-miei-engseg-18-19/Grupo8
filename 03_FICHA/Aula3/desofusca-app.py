@@ -26,11 +26,11 @@ def main(argv):
     try:
         opts, args = getopt.getopt(argv, "h:s:", ["signature=", "RDash=", "in="])
     except getopt.GetoptError:
-        print 'desofusca-app.py -s <Blind Signature> -RDash <pRDashComponents> --in file'
+        print 'desofusca-app.py -s <Blind Signature> --RDash <pRDashComponents> --in file'
         sys.exit(2)
     for opt, arg in opts:
         if opt == '-h':
-            print 'desofusca-app.py -s <Blind Signature> -RDash <pRDashComponents> --in file'
+            print 'desofusca-app.py -s <Blind Signature> --RDash <pRDashComponents> --in file'
             sys.exit()
         elif opt in ("-s", "--signature"):
             blind_signature = arg
@@ -52,4 +52,9 @@ def main(argv):
 
 
 if __name__ == "__main__":
-    main(sys.argv[1:])
+    if len(sys.argv) > 1:
+
+        main(sys.argv[1:])
+    else:
+        print 'desofusca-app.py -s <Blind Signature> --RDash <pRDashComponents> --in file'
+

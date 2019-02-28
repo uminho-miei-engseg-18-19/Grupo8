@@ -7,8 +7,6 @@ def show_results(error_code, result):
     if error_code is None:
         blind_components, p_r_components, blind_m = result
         print("Blind message: %s" % blind_m)
-        print("Blind components: %s" % blind_components)
-        print("pRComponents: %s" % p_r_components)
     elif error_code == 1:
         print("Error: pRDash components are invalid")
 
@@ -38,9 +36,11 @@ def main(argv):
     with open(out_file, "w") as f:
         f.write("Blind components: " + result[0] + '\n')
         f.write("pRComponents: " + result[1] + '\n')
-        f.write("Blind message: " + result[2] + '\n')
     show_results(error_code, result)
 
 
 if __name__ == "__main__":
-    main(sys.argv[1:])
+    if len(sys.argv) > 1:
+        main(sys.argv[1:])
+    else:
+        print 'ofusca-app.py --msg <mensagem a assinar> --RDash <pRDashComponents> --out <ficheiro>'

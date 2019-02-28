@@ -29,11 +29,11 @@ def main(argv):
     try:
         opts, args = getopt.getopt(argv, "h:", ["key=", "bmsg=", "inputFile="])
     except getopt.GetoptError:
-        print 'blind_signature-app.py -key <chave privada> -bmsg <Blind message>'
+        print 'blind_signature-app.py --key <chave privada> --bmsg <Blind message> --inputFile <ficheiro>'
         sys.exit(2)
     for opt, arg in opts:
         if opt == '-h':
-            print 'blind_signature-app.py --key <chave privada> --bmsg <Blind message>'
+            print 'blind_signature-app.py --key <chave privada> --bmsg <Blind message> --inputFile <ficheiro>'
             sys.exit()
         elif opt == "--key":
             ecc_private_key_path = arg
@@ -54,4 +54,7 @@ def main(argv):
 
 
 if __name__ == "__main__":
-    main(sys.argv[1:])
+    if len(sys.argv) > 1:
+        main(sys.argv[1:])
+    else:
+        print 'blind_signature-app.py --key <chave privada> --bmsg <Blind message> --inputFile <ficheiro>'
