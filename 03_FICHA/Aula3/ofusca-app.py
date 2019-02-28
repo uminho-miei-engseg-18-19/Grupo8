@@ -2,23 +2,23 @@ import sys, getopt
 from eVotUM.Cripto import eccblind
 
 
-def showResults(errorCode, result):
+def show_results(error_code, result):
     print("Output")
-    if (errorCode is None):
-        blindComponents, pRComponents, blindM = result
-        print("Blind message: %s" % blindM)
-        print("Blind components: %s" % blindComponents)
-        print("pRComponents: %s" % pRComponents)
-    elif (errorCode == 1):
+    if error_code is None:
+        blind_components, p_r_components, blind_m = result
+        print("Blind message: %s" % blind_m)
+        print("Blind components: %s" % blind_components)
+        print("pRComponents: %s" % p_r_components)
+    elif error_code == 1:
         print("Error: pRDash components are invalid")
 
 
 def main(argv):
-    pRDashComponents = ''
+    p_r_dash_components = ''
     data = ''
-    out_file = ""
+    out_file = ''
     try:
-        opts, args = getopt.getopt(argv, "h:", ["msg=", "RDash=", "--out"])
+        opts, args = getopt.getopt(argv, "h:", ["msg=", "RDash=", "out="])
     except getopt.GetoptError:
         print 'ofusca-app.py --msg <mensagem a assinar> --RDash <pRDashComponents> --out <ficheiro>'
         sys.exit(2)
@@ -26,19 +26,21 @@ def main(argv):
         if opt == '-h':
             print 'ofusca-app.py --msg <mensagem a assinar> --RDash <pRDashComponents> --out <ficheiro>'
             sys.exit()
-        elif opt in ("--msg"):
+        elif opt == "--msg":
             data = arg
-        elif opt in ("--RDash"):
-            pRDashComponents = arg
-        elif opt in ("--out"):
-            out_file= arg
-    s = data.encode('utf-8')
-    errorCode, result = eccblind.blindData(pRDashComponents, "0x"+s.hex())
-    with open(out_file, "w") as f:
-        f.write(result + "\n")
-    showResults(errorCode, result)
+        elif opt == "--RDash":
+            p_r_dash_components = arg
+        elif opt == "--out":
+            out_file = arg
 
+    data_hex = '0x' + data.encode('hex')
+    error_code, result = eccblind.blindData(p_r_dash_components, data)
+    with open(out_file, "w") as f:
+        f.write("Blind components: " + result[0] + '\n')
+        f.write("pRComponents: " + result[1] + '\n')
+        f.write("Blind message: " + result[2] + '\n')
+    show_results(error_code, result)
 
 
 if __name__ == "__main__":
-    main(sys.argv)
+    main(sys.argv[1:])

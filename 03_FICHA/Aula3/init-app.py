@@ -4,15 +4,14 @@ import sys, getopt
 from eVotUM.Cripto import eccblind
 
 
-def getpRDashComponents():
-    initComponents, pRDashComponents = eccblind.initSigner()
-    return initComponents, pRDashComponents
+def get_p_r_dash_components():
+    init_components, pr_dash_components = eccblind.initSigner()
+    return init_components, pr_dash_components
 
 
 def main(argv):
-    input_file = ''
 
-    if  len(argv) > 0:
+    if len(argv) > 0:
         try:
             opts, args = getopt.getopt(argv, "h:", ["init="])
         except getopt.GetoptError:
@@ -23,15 +22,17 @@ def main(argv):
                 print('python init-app.py --init <outputfile> or python init-app.py ')
                 sys.exit()
             elif opt == "--init":
-                input_file = arg
-                initComponents, pRDashComponents = getpRDashComponents()
-                with open(input_file, "w") as f:
-                    f.write("initComponents: " + initComponents + "\n")
-                    f.write("pRDashComponents: " + pRDashComponents + "\n")
+                out_file = arg
+
+                init_components, pr_dash_components = get_p_r_dash_components()
+                with open(out_file, "w") as f:
+                    f.write("initComponents: " + init_components + "\n")
+                    f.write("pRDashComponents: " + pr_dash_components + "\n")
+                # print "File {} created".format(out_file)
 
     else:
-            initComponents, pRDashComponents = getpRDashComponents()
-            print(pRDashComponents)
+            init_components, pr_dash_components = get_p_r_dash_components()
+            print(pr_dash_components)
 
 
 if __name__ == "__main__":
