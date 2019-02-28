@@ -33,7 +33,7 @@ Por fim, o serviço da Qualys analisa as cifras suportadas pelo servidor web. O 
 
 Como dito anteriormente, a nota da implementação do SSL pelo site da Caixa Geral de Depósitos é B. Essa nota é a derivação das notas para cada uma das quatro componentes descritas acima. É possível ver no relatório, que o certificado obteve nota máxima (100); os protocolos suportados ficaram com nota próxima a 100; já a troca de chaves e a força das cifras obtiveram nota 70 cada uma (o que é considerada uma nota mediana).
 
-![summary-cgd](/home/raphael/Raphael/02_Uminho/ES/Grupo8/tp2/summary-cgd.png)
+![summary-cgd](https://github.com/uminho-miei-engseg-18-19/Grupo8/blob/master/03_FICHA/Pergunta%202.1/summary-cgd.png)
 
 ### Certificado
 
@@ -67,7 +67,7 @@ O site da Caixa Geral de Depósitos, nas três versões do protocolo TLS suporta
 
 Para ambos os casos (ausência de PFS e AEAD), é possível ver as falhas na tabela abaixo:
 
-![1551115275818](/home/raphael/Raphael/02_Uminho/ES/Grupo8/tp2/1551115275818.png)
+![1551115275818](https://github.com/uminho-miei-engseg-18-19/Grupo8/blob/master/03_FICHA/Pergunta%202.1/1551115275818.png)
 
 O modo criptográfico CBC (*Cipher Block Chaining*) é vulnerável a ataques do tipo *timing attack*, que permite descriptografar os dados e lê-los em texto claro.
 

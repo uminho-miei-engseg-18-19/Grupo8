@@ -1,8 +1,9 @@
 
 # 1
 As empresas escolhidas foram selecionadas através do uso do site https://www.shodan.io/ sendo as mesmas as seguintes:
-[OVH SAS](92.222.93.35.md)
-[Iliad-Entreprises](195.154.134.61.md)
+[OVH SAS](https://github.com/uminho-miei-engseg-18-19/Grupo8/blob/master/03_FICHA/Pergunta%203.1/92.222.93.35.md)
+
+[Iliad-Entreprises](https://github.com/uminho-miei-engseg-18-19/Grupo8/blob/master/03_FICHA/Pergunta%203.1/195.154.134.61.md)
 
 # 2
 
@@ -16,9 +17,9 @@ OpenSSH Version: 7.4
 
 Como se pode ver pelas imagens seguintes, consoante a pesquisa feita no site cvedetail a versão com mais vulnerabilidade é a 6.7p1.
 
-![Vulnerabilidades OVH SAS](2.png)
+![Vulnerabilidades OVH SAS](https://github.com/uminho-miei-engseg-18-19/Grupo8/blob/master/03_FICHA/Pergunta%203.1/2.PNG)
 
-![Vulnerabilidades Iliad-Entreprises](1.png)
+![Vulnerabilidades Iliad-Entreprises](https://github.com/uminho-miei-engseg-18-19/Grupo8/blob/master/03_FICHA/Pergunta%203.1/1.PNG)
 
 # 4
 
@@ -28,4 +29,4 @@ Se se observar a imagem das "Vulnerabilidades Iliad-Entreprises" encontramos tr�
 # 5
 
 Através da leitura da descrição de cada vulnerabilidade chegamos à conclusão que estas vulnerabilidades são graves devido a um atacante poder, por ordem: saber se um certo utilizador existe, fazer enumeração de utilizadores do sistema, conseguir escrever ficheiros vazios. Sendo que existe um exploit conhecido para a 2ª vulnerabilidade.
-![Exploit](4.png)
+![Exploit](https://github.com/uminho-miei-engseg-18-19/Grupo8/blob/master/03_FICHA/Pergunta%203.1/4.PNG)
