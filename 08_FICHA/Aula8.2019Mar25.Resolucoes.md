@@ -128,40 +128,40 @@ Devido à probabilidade muito baixa de geração bem-sucedida, isso torna imprev
 
 Para que um bloco seja válido, ele deve ter um valor menor que o destino atual. Isso significa que cada bloco indica o trabalho feito gerando-o. Cada bloco contém o _hash_ do bloco anterior. Assim, cada bloco tem uma cadeia de blocos que contém uma quantidade significativa de trabalho. 
 
-Após algumas iterações dá para perceber o padrão descrito na pergunta anterior: todos os números são múltiplos de 9 e a prova anterior divide a prova corrente, sendo que a prova do próximo bloco será o mais próximo múltiplo de 9. De facto a tabela abaixo dá para mostrar matemáticamente o cálculo de todas as provas, dependendo do índice do bloco. Seja um $k \geq 0$ o índice atual, a prova corrente será $2^{k} \times 3^2 \equiv 2^k \times 9 $ . Este resultado pode ser comprovado para um $k \in [0, \dots , 26]$ na tabela seguinte. 
+Após algumas iterações dá para perceber o padrão descrito na pergunta anterior: todos os números são múltiplos de 9 e a prova anterior divide a prova corrente, sendo que a prova do próximo bloco será o mais próximo múltiplo de 9. De facto a tabela abaixo dá para mostrar matemáticamente o cálculo de todas as provas, dependendo do índice do bloco. Seja um k >= 0 o índice atual, a prova corrente será 2^k * 3^2 = 2^k * 9. Este resultado pode ser comprovado para um k de 0 a 26 na tabela seguinte. 
 
 Este resultado pode ser obtido pela fatorização do número da prova e pela análise do algoritmo para os primeiros blocos gerados. Embora a fatorização seja um problema difícil, os números envolvidos são muito pequenos e, até que a _blockchain_ atinja um número de blocos em que o número seja difícil de fatorizar pode levar bastante tempo, como também, deve-se assumir que o algoritmo é do conhecimento do atacante.
 
 
 | index | proof-of-work | Cálculo |
 | ----- | ------------- | ------- |
-|   0   |            9  | $2^0 \times 3^2 $ |
-|   1   |           18  | $2^1 \times 3^2 $ |
-|   2   |           36  | $2^2 \times 3^2 $ |
-|   3   |           72  | $2^3 \times 3^2 $ |
-|   4   |          144  | $2^4 \times 3^2 $ |
-|   5   |          288  | $2^5 \times 3^2 $ |
-|   6   |          576  | $2^6 \times 3^2 $ |
-|   7   |         1152  | $2^7 \times 3^2 $ |
-|   8   |         2304  | $2^8 \times 3^2 $ |
-|   9   |         4608  | $2^9 \times 3^2 $ |
-|   10  |         9216  | $2^{10} \times 3^2 $ |
-|   11  |        18432  | $2^{11} \times 3^2 $ |
-|   12  |        36864  | $2^{12} \times 3^2 $ |
-|   13  |        73728  | $2^{13} \times 3^2 $ |
-|   14  |       147456  | $2^{14} \times 3^2 $ |
-|   15  |       294912  | $2^{15} \times 3^2 $ |
-|   16  |       589824  | $2^{16} \times 3^2 $ |
-|   17  |      1179648  | $2^{17} \times 3^2 $ |
-|   18  |      2359296  | $2^{18} \times 3^2 $ |
-|   19  |      4718592  | $2^{19} \times 3^2 $ |
-|   20  |      9437184  | $2^{20} \times 3^2 $ |
-|   21  |     18874368  | $2^{21} \times 3^2 $ |
-|   22  |     37748736  | $2^{22} \times 3^2 $ |
-|   23  |     75497472  | $2^{23} \times 3^2 $ |
-|   24  |    150994944  | $2^{24} \times 3^2 $ |
-|   25  |    301989888  | $2^{25} \times 3^2 $ |
-|   26  |    603979776  | $2^{26} \times 3^2 $ |
+|   0   |            9  | 2^0 * 3^2  |
+|   1   |           18  | 2^1 * 3^2  |
+|   2   |           36  | 2^2 * 3^2  |
+|   3   |           72  | 2^3 * 3^2  |
+|   4   |          144  | 2^4 * 3^2  |
+|   5   |          288  | 2^5 * 3^2  |
+|   6   |          576  | 2^6 * 3^2  |
+|   7   |         1152  | 2^7 * 3^2  |
+|   8   |         2304  | 2^8 * 3^2  |
+|   9   |         4608  | 2^9 * 3^2  |
+|   10  |         9216  | 2^10 * 3^2  |
+|   11  |        18432  | 2^11 * 3^2  |
+|   12  |        36864  | 2^12 * 3^2  |
+|   13  |        73728  | 2^13 * 3^2  |
+|   14  |       147456  | 2^14 * 3^2  |
+|   15  |       294912  | 2^15 * 3^2  |
+|   16  |       589824  | 2^16 * 3^2  |
+|   17  |      1179648  | 2^17 * 3^2  |
+|   18  |      2359296  | 2^18 * 3^2  |
+|   19  |      4718592  | 2^19 * 3^2  |
+|   20  |      9437184  | 2^20 * 3^2  |
+|   21  |     18874368  | 2^21 * 3^2  |
+|   22  |     37748736  | 2^22 * 3^2  |
+|   23  |     75497472  | 2^23 * 3^2  |
+|   24  |    150994944  | 2^24 * 3^2  |
+|   25  |    301989888  | 2^25 * 3^2  |
+|   26  |    603979776  | 2^26 * 3^2  |
 
 
 
