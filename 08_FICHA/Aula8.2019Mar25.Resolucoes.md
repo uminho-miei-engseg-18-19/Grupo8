@@ -108,19 +108,15 @@ node main.js  30,82s user 0,52s system 103% cpu 30,233 total
 
 Conclusão:
 
-![graph](graph.png)
-
 O tempo de encontrar um Hash que contenha exatamente um determinado número de zeros no início (que é a dificuldade determinada) aumenta de forma exponencial conforme a dificuldade aumenta. Interessa notar que uma criptomoeda que trabalhe com um Proof-of-Work dessa forma permite que os primeiros *miners* consigam minerar os primeiros blocos de forma relativamente fácil. Além disso, é possível perceber que é inviável para um computador comum fazer a mineração de blocos de criptomoedas já estabelecidas, como é o caso do Bitcoin.
 
 #### Pergunta 2.2
 
-#### ##### 1
+##### **1**
 
+O algoritmo _proof of work_ utilizado é simples:  para criar um novo bloco cada _miner_  tem que incrementar um número a um número de prova anterior e quando esse número for divisível por 9 e divisível pelo número da prova do anterior bloco, um novo bloco será criado, e o _miner_ terá a sua recompensa.
 
-
-O algoritmo _proof of work_ utilizado é simples:  para criar um novo bloco cada _miner_  tem que incrementar um número a um número de prova anterior e quando esse número for divisível por 9 e divisível pelo número da prova do anterior bloco, um novo bloco será criado, e o _miner_ terá a sua recompensa.
-
-#### ##### 2
+##### **2**
 
 Para que um algoritmo de mineração seja adequado, o _miner_ tem que efetuar o puzzle computacionalmente intensivo e ser recompensado por esse trabalho, normalmente na criptomoeda nativa que faz parte do sistema de consenso. Caso contrário, não haveria confiança na criptomoeada dado que utilizadores maliciosos poderiam tentar manipular a criptomoeda. 
 
@@ -128,13 +124,13 @@ Esse puzzle tem que ser difícil de resolver, mas fácil de verificar que a solu
 propostos e, qualquer próximo bloco que não satisfaça o puzzle
 pode ser rejeitado. 
 
-Devido à probabilidade muito baixa de geração bem-sucedida, isso torna imprevisível qual _miner_  na rede será capaz de gerar o próximo bloco, uma vez que necessita de processos aleatórios com baixa probabilidade e requer muita tentativa-e-erro sem qualquer média antes de se gerar a prova. Por isso, o trabalho envolvido num puzzle não influencia a probalilidade de resolver o puzzle atual ou futuro, i.e.,  os puzzles são independentes. A utilização de _nonces_ no _hash_ introduz essa inprevisibilidade. 
+Devido à probabilidade muito baixa de geração bem-sucedida, isso torna imprevisível qual _miner_  na rede será capaz de gerar o próximo bloco, uma vez que necessita de processos aleatórios com baixa probabilidade e requer muita tentativa-e-erro sem qualquer média antes de se gerar a prova. Por isso, o trabalho envolvido num puzzle não influencia a probalilidade de resolver o puzzle atual ou futuro, i.e.,  os puzzles são independentes. A utilização de _nonces_ no _hash_ introduz essa inprevisibilidade. 
 
 Para que um bloco seja válido, ele deve ter um valor menor que o destino atual. Isso significa que cada bloco indica o trabalho feito gerando-o. Cada bloco contém o _hash_ do bloco anterior. Assim, cada bloco tem uma cadeia de blocos que contém uma quantidade significativa de trabalho. 
 
 Após algumas iterações dá para perceber o padrão descrito na pergunta anterior: todos os números são múltiplos de 9 e a prova anterior divide a prova corrente, sendo que a prova do próximo bloco será o mais próximo múltiplo de 9. De facto a tabela abaixo dá para mostrar matemáticamente o cálculo de todas as provas, dependendo do índice do bloco. Seja um $k \geq 0$ o índice atual, a prova corrente será $2^{k} \times 3^2 \equiv 2^k \times 9 $ . Este resultado pode ser comprovado para um $k \in [0, \dots , 26]$ na tabela seguinte. 
 
-Este resultado pode ser obtido pela fatorização do número da prova e pela análise do algoritmo para os primeiros blocos gerados. Embora a fatorização seja um problema difícil, os números envolvidos são muito pequenos e, até que a _blockchain_ atinja um número de blocos em que o número seja difícil de fatorizar pode levar bastante tempo, como também, deve-se assumir que o algoritmo é do conhecimento do atacante.
+Este resultado pode ser obtido pela fatorização do número da prova e pela análise do algoritmo para os primeiros blocos gerados. Embora a fatorização seja um problema difícil, os números envolvidos são muito pequenos e, até que a _blockchain_ atinja um número de blocos em que o número seja difícil de fatorizar pode levar bastante tempo, como também, deve-se assumir que o algoritmo é do conhecimento do atacante.
 
 
 | index | proof-of-work | Cálculo |
