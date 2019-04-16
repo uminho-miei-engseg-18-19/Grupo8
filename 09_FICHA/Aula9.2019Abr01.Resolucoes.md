@@ -1,8 +1,15 @@
+## Pergunta 1.1
 
+1. Cada aplicação tem um número de _bug_ e estima-se que qualquer pacote de software tem uma média de 5 a 50 _bugs_ por cada 1.000 SLOC (Source Lines Of Code – linhas de código fonte, sendo o limite superior (50 bugs por 1.000 LOC) para software normal e limite inferior (5 bugs por 1.000 LOC) para software desenvolvido utilizando métodos de desenvolvimento rigorosos. Assin para cada z linhas de código, o número de bugs estimado x = z * 5/1000 para o limite inferior e y = z * 5/100 para o limite superior
 
+   **Bugs/SLOC em:**
 
+   * Facebook - 62 milhões de linhas de código, x = 310000 e y = 3100000 bugs 
+   * Software de automóveis - 100 milhões de linhas de código, x = 500000 and y = 5000000
+   * Linux 3.1 - 15 milhões de linhas de código,  x = 75000 e  y = 750000 bugs
+   * Todos os serviços Internet da Google - 2 biliões de linhas de código, x = 10000000 e y = 100000000 bugs
 
-
+2. 
 
 
 
