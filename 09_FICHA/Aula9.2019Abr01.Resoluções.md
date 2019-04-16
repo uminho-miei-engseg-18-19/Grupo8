@@ -1,3 +1,11 @@
+
+
+
+
+
+
+
+
 ## Pergunta 1.2
 
 __Vulnerabilidades de Projeto__ são defeitos que são inseridos no sistema na fase de planeamento tal como:
@@ -14,3 +22,13 @@ __Vulnerabilidades de Projeto__ são defeitos que são inseridos no sistema na f
 
 - [Improper Access Control](<https://cwe.mitre.org/data/definitions/284.html>) - O software não restringe, ou restringe incorretamente, o acesso a um recurso por uma pessoa não autorizada. Esta vulnerabilidade pode ser resolvida através da implementação de controlo de acesso ou através de um melhoramento da já existente.
 - [Protection Mechanism Failure](<https://cwe.mitre.org/data/definitions/693.html>) - O produto não usa, ou usa incorretamente, mecanismos de proteção que provém defesa suficiente contra ataques diretos contra o produto. Esta vulnerabilidade será difícil de resolver visto que para a implementação de mecanismos de segurança teremos de fazer um teste a fundo no produto de modo a descobrir, ou tentar descobrir, as falhas existentes de modo a serem implementados corretamente.
+
+## Pergunta 1.3
+
+Uma **vulnerabilidade de dia-zero** (*0day vulnerability*) é aquela vulnerabilidade conhecida pelo fabricante do software, porém sem um *patch* de correção disponível. Ou seja, é uma falha de segurança conhecida no software com grande potencial de exploração, uma vez que não existe correção para a mesma.
+
+Por outro lado, uma vulnerabilidade que não seja de dia-zero é uma falha de segurança no software, mas que já foi corrigida pelo fabricante. Nesse caso, só estarão vulneráveis aqueles que estiverem utilizando o software sem a atualização de segurança. Esse é, inclusive, o motivo de se recomendar utilizar os softwares sempre em suas versões mais recentes.
+
+Um exemplo recente de **vulnerabilidade de dia-zero** é a encontrada no navegador Internet Explorer 11. A vulnerabilidade, reportada para a Microsoft no dia 27/03/2019 e sem correção até hoje, necessita apenas que a vítima acesse um ficheiro .MHT especialmente criado. Quando a vítima acessa esse ficheiro, o atacante explora uma falha de injeção de XML (*XML External Entity Injection*) que permite acessar todos os ficheiros do sistema da vítima.
+
+Como a Microsoft ainda não corrigiu a vulnerabilidade, ela continua sendo de dia-zero. Ou seja, **todos os usuários** do Internet Explorer 11 estão vulneráveis a esse ataque e não há praticamente nada que podem fazer para se protegerem (apenas terem bastante atenção aos sites que visitam e ficheiros que abrem no computador).
