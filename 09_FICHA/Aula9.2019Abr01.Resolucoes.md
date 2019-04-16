@@ -1,15 +1,23 @@
 ## Pergunta 1.1
 
-1. Cada aplicação tem um número de _bug_ e estima-se que qualquer pacote de software tem uma média de 5 a 50 _bugs_ por cada 1.000 SLOC (Source Lines Of Code – linhas de código fonte, sendo o limite superior (50 bugs por 1.000 LOC) para software normal e limite inferior (5 bugs por 1.000 LOC) para software desenvolvido utilizando métodos de desenvolvimento rigorosos. Assin para cada z linhas de código, o número de bugs estimado x = z * 5/1000 para o limite inferior e y = z * 5/100 para o limite superior
+1. Cada aplicação tem um número de _bug_ e estima-se que qualquer pacote de software tem uma média de 5 a 50 _bugs_ por cada 1.000 SLOC (Source Lines Of Code – linhas de código fonte, sendo o limite superior (50 bugs por 1.000 LOC) para software normal e limite inferior (5 bugs por 1.000 LOC) para software desenvolvido utilizando métodos de desenvolvimento rigoroso, ou seja,  varia muito de acordo com a linguagem utilizada, o tipo de processos de garantia de qualidade e o níveis de teste. 
+
+   Com efeito, para cada z linhas de código, o número de bugs estimado x = z * 5/1000 para o limite inferior e y = z * 5/100 para o limite superior.
+
+   
 
    **Bugs/SLOC em:**
 
-   * Facebook - 62 milhões de linhas de código, x = 310000 e y = 3100000 bugs 
-   * Software de automóveis - 100 milhões de linhas de código, x = 500000 and y = 5000000
-   * Linux 3.1 - 15 milhões de linhas de código,  x = 75000 e  y = 750000 bugs
-   * Todos os serviços Internet da Google - 2 biliões de linhas de código, x = 10000000 e y = 100000000 bugs
+   * _Facebook_ - 62 milhões de linhas de código, x = 310000 e y = 3100000 bugs 
+   * _Software de automóveis_ - 100 milhões de linhas de código, x = 500000 and y = 5000000
+   * _Linux 3.1_ - 15 milhões de linhas de código,  x = 75000 e  y = 750000 bugs
+   * _Todos os serviços Internet da Google_ - 2 biliões de linhas de código, x = 10000000 e y = 100000000 bugs
 
-2. 
+2.  O número de _bugs_ afeta diretamente o número de vulnerabilidades existentes, uma vez que sistemas mais complexos tendem a ser mais inseguros simplesmente devido ao maior número de linhas de código necessárias para desenvolvê-los e mais linhas de código mais _bugs_. 
+
+   Não podemos ter a certeza de quantos dos _bugs_ existentes para os serviços e sistemas são vulnerabilidades. As empresas desenvolvedores desenvolvem _patches_ para as vulnerabilidades que por si só acrescentam mais linhas de código, e consequentemente mais _bugs_ e possivelmente mais vulnerabilidades, como também existem vulnerabilidades por descobrir e, no extremo, podem demorar muito tempo a ser descobertas. 
+
+   
 
 
 
