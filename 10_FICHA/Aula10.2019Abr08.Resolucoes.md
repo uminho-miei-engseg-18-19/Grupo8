@@ -53,20 +53,13 @@ Os controlos de segurança acima enunciados servem para garantir o desenvolvimen
 
 ### 3. SAMM (_Software Assurance Maturity Model_)
 
-Dado que o projeto do grupo 8 não é de desenvolvimento de software, mas de técnicas de intrusão, certas liberdades foram tomadas no preenchimento do SAMM:
+O projeto do grupo 8 não de desenvolvimento de software, mas de técnicas de intrusão, 
 
-- Stakeholders: diretor geral da empresa do teste de intrusão
-- Organização: UC
-- Gestor de projeto: Professor da UC
-- Projeto: Teste de Intrusão
-- Equipa de desenvolvimento: grupo de trabalho.
-
-Note-se que algumas perguntas podem não ter uma resposta coerente com a entrevista do SAMM visto que o teste de intrusão é:
-
-- Black-box testing;
-- Não estámos a desenvolver programas, nem usar frameworks, nem design patterns ou também fazer análise de código. Ou seja, não se está a desenvolver uma aplicação.
-
-Outras considerações: seguimento do PenTest Standard e existência de um contrato de pré-envolvimento  que limita certas ações.
+ Com efeito o projeto escolhido para este exercício é o corrente projeto de Laboratórios de Engenharia Informática - Aplicação de gestão de agenda.
+Este projeto tem por objetivo criar uma aplicação para gestão do tempo, onde as atividades de determinado projeto são categorizadas com auxílio de processos de rastreio de uso de aplicações em ambiente desktop e mobile.
+Para esse intuito vários dados são recolhidos de forma automática tais como janelas abertas, uso de sistemas de controlo de versão, editores de texto e IDEs, atividades de browser, clientes de email, etc, isto do lado desktop, Ni âmbito do módulo mobile, a ser feito em Android, as informações rastreadas são localizações, registo de chamadas e registo de mensagens.
+Os requisitos da aplicação são apenas requisitos de utilizador e os de sistema - funcionais - apenas se focam na usabilidade, disponibilidade, performance, responsividade, manutentabilidade, interoperabilidade, entre outros, sendo que requisitos de utilizador e funcionais de sistema de segurança são na sua maioria ignorados, exceto a existência de um registo e _login_ na aplicação para autenteticação doz utilizadores filtrado por papel funcional no modelo de negócio - gestor de projeto, colaboradores.
+Para o desenvolvimento da aplicação existe um repositório privado Gitlab com acesso via VPN para a equipa desktop, enquanto a equipa mobile possui um repositório privado via Github. Os mecanismos de segurança para publicar alterações nos repositórios é via SSH.
 
 #### Pergunta P3.1
 
