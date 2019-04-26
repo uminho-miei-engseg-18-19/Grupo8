@@ -73,7 +73,7 @@ Para o desenvolvimento da aplicação existe um repositório privado Gitlab com 
 
 #### Pergunta P3.1
 
-Dado as explicações anteriores, os resultados das maturidades nas 12 categorias na _Interview_ foi nulo na sua grande maioria, podendo afirmar que é algo comum em projetos não relacionados diretamente com segurança a nível académico, dado que o foco são as funcionalidades e a segurança é algo para depois. A análise é o mais realista possível do nível de segurança do grupo de trabalho desse projeto - os _stakeholders_ podem ser considerados o coordenador da UC, a organização são o grupo de trabalho e o coordenador e na menção de projetos apenas se refere a este.
+Dado as explicações anteriores, os resultados das maturidades nas 12 categorias na _Interview_ foi nulo na sua grande maioria, podendo afirmar que é algo comum em projetos não relacionados diretamente com segurança a nível académico, dado que o foco são as funcionalidades e a segurança é algo para depois. A análise é o mais realista possível do nível de segurança do grupo de trabalho desse projeto - os _stakeholders_ podem ser considerados o coordenador da UC, a organização são o grupo de trabalho e o coordenador e, na menção de projetos no SAMM apenas se refere a este mesmo projeto.
 
 De todas as que foram preenchidas as escolhidas foram as seguintes:
  
