@@ -53,19 +53,35 @@ Os controlos de segurança acima enunciados servem para garantir o desenvolvimen
 
 ### 3. SAMM (_Software Assurance Maturity Model_)
 
-O projeto do grupo 8 não de desenvolvimento de software, mas de técnicas de intrusão, 
+O projeto do grupo 8 não é de desenvolvimento de software, mas de técnicas de intrusão. 
 
- Com efeito o projeto escolhido para este exercício é o corrente projeto de Laboratórios de Engenharia Informática - Aplicação de gestão de agenda.
+Com efeito o projeto escolhido para este exercício e para poder usar o SAMM a escolha recai para outro projeto é o corrente projeto de Laboratórios de Engenharia Informática - Aplicação de gestão de agenda.
+
 Este projeto tem por objetivo criar uma aplicação para gestão do tempo, onde as atividades de determinado projeto são categorizadas com auxílio de processos de rastreio de uso de aplicações em ambiente desktop e mobile.
-Para esse intuito vários dados são recolhidos de forma automática tais como janelas abertas, uso de sistemas de controlo de versão, editores de texto e IDEs, atividades de browser, clientes de email, etc, isto do lado desktop, Ni âmbito do módulo mobile, a ser feito em Android, as informações rastreadas são localizações, registo de chamadas e registo de mensagens.
-Os requisitos da aplicação são apenas requisitos de utilizador e os de sistema - funcionais - apenas se focam na usabilidade, disponibilidade, performance, responsividade, manutentabilidade, interoperabilidade, entre outros, sendo que requisitos de utilizador e funcionais de sistema de segurança são na sua maioria ignorados, exceto a existência de um registo e _login_ na aplicação para autenteticação doz utilizadores filtrado por papel funcional no modelo de negócio - gestor de projeto, colaboradores.
+
+Para esse intuito vários dados são recolhidos de forma automática do módulo desktop, tais como janelas abertas, uso de sistemas de controlo de versão, editores de texto e IDEs, atividades de browser, clientes de email, etp.
+
+No âmbito do módulo mobile, a ser feito em Android, as informações rastreadas são localizações, registo de chamadas e registo de mensagens.
+
+Os requisitos da aplicação são apenas requisitos de utilizador e os de sistema - funcionais - apenas se focam na usabilidade, disponibilidade, performance, responsividade, manutentabilidade, interoperabilidade, entre outros, sendo que requisitos de utilizador e funcionais de sistema de segurança são na sua maioria ignorados, exceto a existência de um registo e _login_ na aplicação para autenteticação doz utilizadores filtrado por papel funcional no modelo de negócio - gestor de projeto, 
+colaboradores e um administrador. 
+
 Para o desenvolvimento da aplicação existe um repositório privado Gitlab com acesso via VPN para a equipa desktop, enquanto a equipa mobile possui um repositório privado via Github. Os mecanismos de segurança para publicar alterações nos repositórios é via SSH.
 
 #### Pergunta P3.1
 
-- Threat Assessment
-- Security Testing
-- Environment Hardening
+Dado as explicações anteriores, os resultados das maturidades nas 12 categorias na _Interview_ foi nulo na sua grande maioria, podendo afirmar que é algo comum em projetos não relacionados diretamente com segurança a nível académico, dado que o foco são as funcionalidades e a segurança é algo para depois. A análise é o mais realista possível do nível de segurança do grupo de trabalho desse projeto - os _stakeholders_ podem ser considerados o coordenador da UC, a organização são o grupo de trabalho e o coordenador e na menção de projetos apenas se refere a este.
+
+De todas as que foram preenchidas as escolhidas foram as seguintes:
+ 
+- Education & Guidance - 0.10
+- Threat Assessment - 0.10
+- Security Requiremnts - 0.0 
+
+A escolha recai nestas três dado que as fases de requisitos e modelação do sistema são das mais fundamentais. No entanto, todas as das categorias _Governance_ e _Construction_ precisassem de um SAMM muito bem definido. 
+
+Note-se que não se escolheu nenhuma por causa da maturidade em particular - existem algumas com maturidade mais elevada - mas com vista mais estratégico.
+
 
 #### Pergunta P3.2
 
