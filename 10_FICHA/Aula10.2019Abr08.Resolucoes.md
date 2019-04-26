@@ -28,6 +28,9 @@ Modelo de desenvolvimento de software seguro *Microsoft Security Development Lif
 - (Pós)Fase de Resposta
 
 A Fase de Requisitos contém a Identificação de Requisitos de Segurança tendo esses requisitos dois tipos, políticas de segurança e mecanismos de segurança, sendo que os mesmos são levantados através da legislação aplicável ao negócio, dos *standards*, dos valores e/ou políticas da empresa, dos modelos de risco e dos casos de abuso o que leva à necessidade de usar o regulamento europeu RGPD nesta fase do modelo.
+
+No entanto a aplicação dos mecanismos da fase de requisitos, bem como o suporte a dar aos utilizadores para disponibilização de dados, tanto na fase de codificação, verificação, publicação, de resposta, ou seja, tudo que possa inteferir com a confidencialidade, integridade e disponibilidade dos dados deve ser levado em conta. Por exemplo, é necessário verificar se os requisitos estão implementados de forma correta e se estão de acordo com o que ficou estipulado na fase de requisitos e isto apenas vem nas fases de verificação. De igual modo, na fase de resposta é necessário apoio aos utilizadores e garantir que o sistema continua a cumprir o RGPD.
+
 #### Pergunta P2.2
 
 Os controlos de segurança da Secção 10.1 *Cryptographic controls* são:
