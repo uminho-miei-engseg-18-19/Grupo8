@@ -83,7 +83,7 @@ De todas as que foram preenchidas as escolhidas foram as seguintes:
 
 A escolha recai nestas três dado que as fases de requisitos e modelação do sistema são das mais fundamentais. No entanto, todas as das categorias _Governance_ e _Construction_ precisassem de um SAMM muito bem definido. 
 
-Note-se que não se escolheu nenhuma por causa da maturidade em particular - existem algumas com maturidade mais elevada - mas com vista mais estratégico.
+Note-se que não se escolheu nenhuma por causa da maturidade em particular, uma vez que existem algumas com maturidade mais elevada, mas com um objetivo mais estratégico.
 
 
 #### Pergunta P3.2
