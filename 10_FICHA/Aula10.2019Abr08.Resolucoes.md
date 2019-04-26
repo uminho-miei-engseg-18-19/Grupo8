@@ -88,7 +88,33 @@ Note-se que não se escolheu nenhuma por causa da maturidade em particular, uma 
 
 #### Pergunta P3.2
 
-Para todas nível 1
+Existem 3 níveis de maturidade, sendo que quanto maior o nível, mais tempo e recuros pode levar.
+
+No nível 1 temos abordagens mais reativas e _ad hoc_ como oferecer à equipa recursos para cobrir os tópicos de programação e desenvolvimento seguros. No entanto apenas estamos a oferecer materiais e apenas a um subconjunto da equipa.
+
+No nível 3 as coisas estão mais estruturadas e correm. Inclui educar todo os intervenientes do ciclo de vida do software com mentoria orientada a funções no desenvolvimento seguro. A abordagem é mais activa e trabalha-se com a equipa inteira, como tendo indivíduos reposnsáveis por formar outros e pode-se obter feedback na efetividade dos programas de formação.
+
+Uma vez que na equipa do projeto acima mencionado, apenas 1 elemento da equipa está a receber formação na área de segurança, o sistema é crítico a nível da proteção de dados, formação é o primeiro passo e o mais importante para ter pelo menos a maioria a perceber a importância e perceber o papel da segurança, poder usar melhores práticas em desenvolvimento seguro e ter formação com especialistas na área. Daí que a meta seja o nível 2 para _Education & Guidance_.
+
+Para as restantes o nível desejado é acima de 1, tentando ser mais ambiciosos e ter pelo menos metade da equipa (numa equipa de 5) a considerar riscos de segurança (_Threat Assessment_) e elaborar requisitos de segurança com confiança e documentá-los de forma compreensível com vista um médio prazo. 
+
+
+Note-se que se planeou tendo em conta a formação anterior e especializações, tempo e outros recursos daí o conservadorismo no planeamento.
+
+Assim temos as seguintes metas ideiais para 4 fases, 3 meses cada, com a inclusão de possibilidade de crescimento na maturidad a médio prazo (após término do projeto da UC).
+
+
+- Education & Guidance - 2
+- Threat Assessment - 1.5
+- Security Requiremnts - 1.5
 
 #### Pergunta P3.3
+
+No _Roadmap_ com a estratégia mencionada anteriomente, consegue-se num ano, em 4 fases:
+
+- Education & Guidance - 1.85 (Áquem do ideal anterior)
+- Threat Assessment - 1.5
+- Security Requiremnts - 1.6 (Acima da espetativa)
+
+As escolhas podem ser vistas na [Folha de cálculo SAMM](Aula10/SAMM_Assessment_Toolbox_v1.5_FINAL.xlsx)
 
