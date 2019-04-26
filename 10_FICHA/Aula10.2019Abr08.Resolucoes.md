@@ -112,9 +112,11 @@ Assim temos as seguintes metas ideiais para 4 fases, 3 meses cada, com a inclus�
 
 No _Roadmap_ com a estratégia mencionada anteriomente, consegue-se num ano, em 4 fases:
 
-- Education & Guidance - 1.85 (Áquem do ideal anterior)
+- Education & Guidance - 1.85 
 - Threat Assessment - 1.5
-- Security Requiremnts - 1.6 (Acima da espetativa)
+- Security Requiremnts - 1.6 
+
+Note-se que na utilização do _toolbox_ conseguimos valores diferentes das metas ideiais. No entanto, depois de usar o _toolbox_ considera-se que se aproximam bastante do ideal para incluir o plano.
 
 As escolhas podem ser vistas na [Folha de cálculo SAMM](Aula10/SAMM_Assessment_Toolbox_v1.5_FINAL.xlsx)
 
