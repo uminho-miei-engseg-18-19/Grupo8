@@ -14,7 +14,9 @@ Explique o comportamento dos programas.
 
 #### Pergunta P1.2 - Buffer overflow em várias linguagens
 
+Verifique o que ocorre no mesmo programa escrito em Java (LOverflow3.java), Python (LOverflow3.py) e C++ (LOverflow3.cpp), executando-os.
 
+Explique o comportamento dos programas.
 
 
 #### Pergunta P1.3 - Buffer overflow
