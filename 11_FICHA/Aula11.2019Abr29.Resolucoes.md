@@ -60,7 +60,7 @@ Analise e teste o program escrito em C ReadOverflow.c .
 
 No programa `ReadOverflow` o programa pede ao utiliador o número de caracteres a introduzir, pedindo depois uma frase para introduzir e para cada caractere que não for um caractere de controlo, o programa coloca no _stdout_ os caracteres intruduzidos. Caso for um caractere de controlo, o mesmo coloca do _stdout_ um ponto. O _buffer_ usado para leitura tem um tamanho de 100.
 
-O problema com esta implementação é que se está a pedir ao utilizador um número de caracteres. Assim, um utilizador pode introduzir um tamanho maior que o _buffer_ e assim obter informação do sistema. 
+O problema com esta implementação é que se está a pedir ao utilizador um número de caracteres e o programa não coloca o terminador da _string_ (o `\0`). Assim, um utilizador pode introduzir um tamanho maior que o _buffer_ e assim obter informação do sistema. 
 
 Na imagem abaixo está o exemplo da exploração desta vulnerabilidade para um tamanho de 64000 caracteres.
 
