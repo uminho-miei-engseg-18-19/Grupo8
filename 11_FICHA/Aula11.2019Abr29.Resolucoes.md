@@ -76,7 +76,20 @@ Compile e execute o programa 1-match.c, e obtenha a mensagem de "Congratulations
 
 Indique os passos que efetuou para explorar esta vulnerabilidade.
 
----
+
+
+Tal como na pergunta 1.3 são necessários 76 bytes para chegar à base do endereço do valor inteiro de `control`. Neste caso temos que colocar um valor exato: `0x61626364` em _little-endian_. Este valor em ASCII representa a _string_ "abcd" para cada par de valor hexadecimal (1byte). Com efeito em _little-endian_ esse valor é escrito ao contrário "dcba" como indica a imagem:
+
+![littleendian](Little-Endian.svg)
+
+
+
+Sabendo a posição de memória, chegou-se rapidamente ao resultado como indica a imagem abaixo:
+
+![match](match.png)
+
+
+
 ---
 
 ### 2\. Vulnerabilidade de inteiros
