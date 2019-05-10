@@ -7,16 +7,22 @@
 
 #### Pergunta P1.1 - Buffer overflow em várias linguagens
 
-Verifique o que ocorre no mesmo programa escrito em Java (LOverflow2.java), Python (LOverflow2.py) e C++ (LOverflow2.cpp), executando-os.
+Visto todos os programas fazerem a mesma coisa seria de esperar que os resultados fossem todos os mesmo mas, quando se insere um número maior do que o esperado pelo programa todos eles apresentam reações diferentes.
 
-Explique o comportamento dos programas.
+Quando se corre o programa em C++ e fazemos *Overflow* da variável ```tests``` o mesmo irá continuar a pedir para inserir o próximo número mas não deixará colocar qualquer *input* até chegar ao fim da quantidade de números que tínhamos dito que iriamos colocar. Mas quando fazemos com que o mesmo ocorra quando nós pede para inserirmos a quantidade de números que queremos colocar o programa entra em *loop* fazer *print* constante de "Insira numero: ".
+
+Quando se corre o programa em Java e tentamos fazer o mesmo ocorre uma ```InputMismatchException``` e o programa é terminado.
+
+Quando se corre o programa em Python e tentamos fazer *Overflow* ocorre o erro ```OverflowError: range() result has too many items``` mas somente quando o fazemos no *input* de "Quantos numeros?" visto que "Insira numero: " aceita como *input* números muito maiores.
 
 
 #### Pergunta P1.2 - Buffer overflow em várias linguagens
 
-Verifique o que ocorre no mesmo programa escrito em Java (LOverflow3.java), Python (LOverflow3.py) e C++ (LOverflow3.cpp), executando-os.
+Quando se corre o programa em C++ se tentarmos fazer o ataque no 1º *input* pedido o mesmo irá fechar a execução fazendo *print* de ```Bus error```. Quando tentamos fazer o mesmo com o *input* "Que valor deseja recuperar?" temos como resultado o *output* de "O valor e 0".
 
-Explique o comportamento dos programas.
+Quando se corre o programa em Java e tentamos fazer o mesmo ocorre uma ```InputMismatchException``` e o programa é terminado.
+
+Quando se corre o programa em Python e tentamos fazer *Overflow* ocorre o erro ```OverflowError: range() result has too many items``` mas somente quando o fazemos no 1º *input* visto que "Que valor deseja recuperar?"  tem como *output* "O valor e" e o erro ```IndexError: cannot fit 'long' into an index-sized integer```.
 
 
 #### Pergunta P1.3 - Buffer overflow
