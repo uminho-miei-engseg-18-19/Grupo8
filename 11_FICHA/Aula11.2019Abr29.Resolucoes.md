@@ -23,7 +23,35 @@ Explique o comportamento dos programas.
 
 Analise e teste os programs escritos em C RootExploit.c e 0-simple.c .
 
-+ Indique qual a vulnerabilidade de _Buffer Overflow_ existente e o que tem de fazer (e porquê) para a explorar e (i) obter a confirmação de que lhe foram atribuídas permissões de root/admin, sem utilizar a _password_ correta, (ii) obter a mensagem "YOU WIN!!!".
+##### RootExploit.c
+
+A vulnerabilidade de _overflow_ existente (_Stack Buffer Overflow_) deve-se ao facto do tamanho do _input_ recebido pela função `gets` não verificar o tamanho. Aliás a função `gets` gera alertas do compilador dado tão insegura que é.
+
+Com efeito duas variáveis são declaradas no início: a variável `pass` que é um inteiro (4 bytes em C - usualmente) e um array de caracteres de 4 bytes referente à variável `buff`. Estes valores são colocados na _stack_ do endereço mais alto para o mais baixo, sendo que a escrita é ao contrário (indexação é do mais baixo para o mais alto), isto é, os 4 bytes para a variável inteira são alocados primeiro e os 4 bytes do array são alocados de seguida. De notar que os 4 bytes da variável `pass` são inicializados a 0 e o valor da variável se forem igual a 1 então são atribuídas permissões de root/admin.
+
+Para efetuar o _overflow_ bastam escrever 5 caracteres, sendo que o último tem que ser diferente de `0`. Isto porque em C, qualquer valor diferente de `0` é verdadeiro, assim basta escrever apenas 1 byte na memória alocada para a variável `pass`.
+
+
+
+![Root Exploit _Output_](RootExploit.png)
+
+
+
+
+
+##### 0-Simple.c
+
+Este caso é do mesmo tipo do anterior e funciona da mesma forma: temos duas variáveis (um inteiro `control` de 4 bytes e um array de caracteres - `buffer` - de 64 bytes). A única coisa diferente é que a variável não é inicializada logo na declaração, todavia é-lhe atribuido o valor `0` antes da leitura do buffer. Aqui se o valor da variável for diferente de `0` obtemos a mensagem  "YOU WIN!!!".
+
+
+
+Para efetuar o _overflow_ seriam necessários 65 bytes, sendo que o último, uma vez mais diferente de 0, e pelas mesmas razões enunciadas acima. Todavia o compilador pode compilar e efetuar uma série de otimizações com o alinhamento dos _bytes_ ou possívelmente poderá estar a usar _address space randomization_, o que foi o caso porque as duas variáveis não foram alocadas de forma contígua. Todavia, ao analizar-se os endereços de cada variável foi possivel escrever no _buffer_ de tal forma a modificar a variável `control` de forma a obter a mensagem "YOU WIN!!!". Ou seja, foram necessários escrever 77 caracteres para poder explorar o _buffer overflow_. Note-se que, aqui por simplicidade, se modificou o código em C para obter os endereços, no entanto, o mesmo efeito seria conseguido usando o GDB.
+
+
+
+![O-Simple _output_](0-simple.png)
+
+
 
 
 #### Pergunta P1.4 - Read overflow
@@ -115,3 +143,4 @@ int main() {
 Ao executar o programa com o código acima, é gerado um erro de *Segmentation fault*:
 
 ![p2.2](p2.2.png)
+
