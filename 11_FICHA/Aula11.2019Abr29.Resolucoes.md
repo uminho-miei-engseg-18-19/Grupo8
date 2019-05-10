@@ -58,7 +58,13 @@ Para efetuar o _overflow_ seriam necessários 65 bytes, sendo que o último, uma
 
 Analise e teste o program escrito em C ReadOverflow.c .
 
-+ O que pode concluir?
+No programa `ReadOverflow` o programa pede ao utiliador o número de caracteres a introduzir, pedindo depois uma frase para introduzir e para cada caractere que não for um caractere de controlo, o programa coloca no _stdout_ os caracteres intruduzidos. Caso for um caractere de controlo, o mesmo coloca do _stdout_ um ponto. O _buffer_ usado para leitura tem um tamanho de 100.
+
+O problema com esta implementação é que se está a pedir ao utilizador um número de caracteres. Assim, um utilizador pode introduzir um tamanho maior que o _buffer_ e assim obter informação do sistema. 
+
+Na imagem abaixo está o exemplo da exploração desta vulnerabilidade para um tamanho de 64000 caracteres.
+
+![read overflow](readoverflow.png)
 
 
 #### Pergunta P1.5
