@@ -11,25 +11,25 @@
 
 Com a inserção do nome aconselhado ```Smith``` temos o seguinte *output*:
 
-![Normal Input](C:\Users\lilys\Desktop\Universidade\Mestrado\ES\Grupo8\12_FICHA\1.1.1.PNG)
+![Normal Input](1.1.1.PNG)
 
 Se colocarmos um *input* que é sempre inerentemente verdadeiro conseguimos ter acesso a toda a informação da base de dados. Neste caso o input escolhido foi ```' OR '1'='1``` visto que a *query* irá colocar a informação recebida entre ```''``` e, deste modo, ficamos com um *input* que será sempre verdade.
 
-![Attack Result](C:\Users\lilys\Desktop\Universidade\Mestrado\ES\Grupo8\12_FICHA\1.1.2.PNG)
+![Attack Result](1.1.2.PNG)
 
 #### Pergunta 1.2 - _Numeric SQL Injection_
 
 Com o *input* normal do local, sendo neste exemplo ```Columbia```, temos o seguinte *output*:
 
-![Normal Input](C:\Users\lilys\Desktop\Universidade\Mestrado\ES\Grupo8\12_FICHA\1.2.1.PNG)
+![Normal Input](1.2.1.PNG)
 
 Para fazermos o ataque temos de ir ás ferramentas de programador para podermos analisar e editar o HTML. 
 
 Lendo o código inicial verificamos que o valor inserido na *query* do local ```Columbia``` é o ```value = "101"``` conseguindo, assim, editar esse valor de modo a conseguirmos acesso a toda a informação dessa tabela tendo usado o mesmo exemplo que o exercício anterior, ```'' OR '1'='1'```.
 
-![HTML Edit](C:\Users\lilys\Desktop\Universidade\Mestrado\ES\Grupo8\12_FICHA\1.2.2.PNG)
+![HTML Edit](1.2.2.PNG)
 
-![Attack Result](C:\Users\lilys\Desktop\Universidade\Mestrado\ES\Grupo8\12_FICHA\1.2.3.PNG)
+![Attack Result](1.2.3.PNG)
 
 #### Pergunta 1.3 - _Database Backdoors_
 
